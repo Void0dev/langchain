@@ -146,6 +146,7 @@ class Chain(RunnableSerializable[Dict[str, Any], Dict[str, Any]], ABC):
             dumpd(self),
             inputs,
             name=run_name,
+            run_id = config.get("run_id")
         )
         try:
             self._validate_inputs(inputs)
